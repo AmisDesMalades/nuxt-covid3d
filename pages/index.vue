@@ -1,24 +1,73 @@
 <template>
-  <div class="container">
+  <div>
     <div>
-      <logo />
-      <h1 class="title">
-        race2breath
-      </h1>
-      <h2 class="subtitle">
-        APHP initiative
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <section class="lead">
+          <img src="/landing/landing-logo.png" style="width: 80%" />
+          <h4 style="color: #0646ad;">
+            CONCEVOIR - VALIDER - FABRIQUER - DISTRIBUER - COMBATTRE LE VIRUS
+          </h4>
+          <br />
+          Plateforme interne d'impression haut-débit pour répondre aux besoins
+          sanitaires urgents des soignants
+          <br />
+          Fédération des initiatives de conception et d’impression 3D pour lutter
+          contre le COVID-19 en Île-de-France
+        </section>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-6 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Soignant</h4>
+          </div>
+          <nuxt-link to="/soignant">
+            <img src="landing/landing-caducee.png" class="card-img-top" />
+          </nuxt-link>
+          <div class="card-footer">
+            <nuxt-link to="/soignant">
+              <button type="button" class="btn btn-lg btn-block btn-primary">
+                J'ai besoin d'équipement
+              </button>
+            </nuxt-link>
+          </div>
+        </div>
+
+        <div class="card mb-6 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Ingénieur / Fabricant</h4>
+          </div>
+          <nuxt-link to="/soignant">
+            <img src="/landing/landing-valve.png" class="card-img-top" />
+          </nuxt-link>
+          <div class="card-footer">
+            <nuxt-link to="/soignant">
+              <button type="button" class="btn btn-lg btn-block btn-primary">
+                Venez nous aider
+              </button>
+            </nuxt-link>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          Avec le généreux soutien de
+          <br />
+          <img src="/logos/logo-Kering.jpg" style="height: 150px" />
+          <br />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <br />
+          <img src="/logos/nuage-logos.png" style="width: 100%" />
+        </div>
       </div>
     </div>
   </div>
@@ -26,44 +75,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Logo from '~/components/Logo.vue'
 
 export default Vue.extend({
-  components: {
-    Logo
-  }
+  
 })
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>

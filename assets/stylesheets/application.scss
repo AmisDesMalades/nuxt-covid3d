@@ -1,0 +1,24 @@
+// $navbar-default-bg: #312312;
+// $light-orange: #ff8c00;
+// $navbar-default-color: $light-orange;
+$fa-font-path: "../../node_modules/font-awesome/fonts";
+
+
+@import "bootstrap";
+// @import "font-awesome";
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "./jumpstart/sticky-footer.scss";
+@import "./jumpstart/announcements.scss";
+
+// Fixes bootstrap nav-brand container overlap
+@include media-breakpoint-down(xs) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// Masquerade alert shouldn't have a bottom margin
+body > .alert {
+  margin-bottom: 0;
+}
